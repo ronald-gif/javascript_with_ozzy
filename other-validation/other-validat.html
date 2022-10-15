@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms validation</title>
+    <link rel="stylesheet" href="/other-validation/other-validate.css">
+</head>
+<body>
+    <div class="container">
+        <form id="signup" class="form" action="#" name="registration">
+            <h1>Sign Up</h1>
+            <div class="form-field" id="last">
+                <label for="username">Username:</label>
+                <input type="text" name="userName" id="username" autocomplete="off">
+                <small class="error"></small>
+            </div>
+            
+            <div class="form-field" id="phone">
+                <label for="telephone">Phone number:</label>
+                <input type="text" name="telephone" id="telephone" autocomplete="off" onblur="checkPhone()">
+                <small class="error"></small>
+            </div>
+
+            <div class="form-field" id="email2">
+                <label for="password">email:</label>
+                <input type="text" name="email" id="email" date="off" onblur="checkPassword()">
+                <small class="error"></small>
+            </div>
+            <!-- <div class="form-field">
+                <label for="telephone">Date:</label>
+                <input type="date" name="date" id="date" date="off" onblur="">
+                <small  class="error"></small>
+            </div>
+            -->
+            <div class="form-field" id="pass">
+                <label for="password">Password:</label>
+                <input type="text" name="Password" id="password" date="off" >
+                <small class="error"></small>
+            </div>
+
+            <div class="form-field" id="comfirm">
+                <label for="password"> comfirm Password:</label>
+                <input type="text" name="Password" id="confirm_password" date="off" onblur="checkPassword()">
+                <small class="error"></small>
+            </div>
+
+
+            <!-- <div class="form-field">
+                <label for="country">Country:</label>
+                <select name="country" id="country">
+                    <option value="">uganda</option>
+                    <option value="">kenya</option>
+                    <option value="">Rwanda</option>
+                    <option value="">Burundi</option>
+                </select>
+            </div> -->
+            
+            <div class="form-field radio">
+                <label for="gender">Gender:</label>
+                <div class="radio">
+                <input type="radio" name="sex" id="gender1" checked>
+                <span>Male</span>
+               <input type="radio" name="sex" id="gender2">
+               <span>Female</span>
+
+                </div>
+               
+            </div>
+
+            <div class="form-field radio">
+                <label for="lang">Languages:</label>
+                <div class="radio">
+                <input type="checkbox" name="Luganda" value="language" id="gender1">
+                <span>Luganda</span>
+               <input type="checkbox" name="english" value="language" id="gender2">
+               <span>English</span>
+
+                </div>
+               
+            </div>
+            <input type="submit" value="Sign Up" class="btn">
+        </div>
+    </form>
+</div>
+
+</body>
+<script src="/other-validation/other-validate.js"></script>
+</html>

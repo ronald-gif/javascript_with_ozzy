@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listeners</title>
+</head>
+<body>
+    <button>click me</button>
+    <p>i will change</p>
+
+
+    <div id="Home">
+        <h1>Welcomw to my website</h1>
+        <button class="btn btn-info" id="button-1">lern more</button><br><br>
+        <input type="text" name="" id="user-name"><br>
+        <button class="btn" id="button-2">submit</button>
+    </div>
+</body>
+<script>
+    const changeText = () => {
+        const p = document.querySelector('p');
+        p.textContent = 'i changed because of an event listener'
+    }
+
+    // listening to the click event
+    const button = document.querySelector('button')
+    button.addEventListener('click', changeText)
+
+    //click is an event | clickDemo is a method | and its a callback function its called within another function-and its passed throung as a parameter
+    document.querySelector('.btn').addEventListener('click', clickDemo)
+
+    //handler
+    //the entry point of a website into a web application is form application
+    function clickDemo(){
+        alert('hey there')
+    }
+</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM/ accessing elements in the dom</title>
+    <style>
+        html{
+            font-family: sans-serif;
+            color: #333;
+        }
+
+        body{
+            max-width: 600px;
+            margin: 0 auto;
+            padding 0 15px;
+        }
+
+        div, article{
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #dedede;
+        }
+    </style>
+</head>
+<body>
+     <h1>Accessing the dom</h1>
+    <h2>ID (#demo)</h2>
+    <div id="demo">Access me bt id</div>
+
+    <h2>class (.demo)</h2>
+    <div class="demo"> Access me by class (1)</div>
+    <div class="demo"> Access me by class (2)</div>
+
+    <h2>Tag (article)</h2>
+    <article>Access me by tag (1)</article>
+    <article>Access me by tag (2)</article>
+
+    <h2>query selector</h2>
+    <div id="demo-query"> access me by query</div>
+
+    <h2>query selector all</h2>
+    <div class="demo-query-all">access me by query selector all (1)</div>
+    <div class="demo-query-all">access me by query selector all (2)</div>
+
+    <script>
+        document.getElementById("demo").style.color = " purple";
+        let demoClass = document.getElementsByClassName('demo')
+        const demoTag = document.getElementsByTagName("article")
+        const demoQuery = document.querySelector("#demo-query")
+        const demoQueryAll = document.querySelectorAll(".demo-query-all")
+    
+        for(i = 0; i<2; i++){
+            demoClass[i].style.border= " 4px solid blue"
+        }
+        
+        for(i = 0; i < demoTag.length; i++){
+            demoTag[i].style.backgroundColor = "grey"
+        }
+
+        demoQueryAll.forEach(
+            i => {
+                i.style.border = "2px solid yellow"
+            }
+        )
+        demoQuery.style.backgroundColor = "pink"
+        demoTag.style.backgroundColor = "purple"
+    </script>
+</body>
+</html>

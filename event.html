@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button>click me</button>
+    <p>Try to change me</p>
+</body>
+<script>
+    // const p = document.querySelector('p');
+    // p.textContent = "i changed because of an event handler";
+    // p.style.background = 'gold'
+    // p.style.borderRadius = '50%'
+
+    let para = document.querySelector('p')
+    let button = document.querySelector('button')
+
+    const changeText = () => {
+        para.textContent = 'am changing'
+    }
+
+    function alertText(){
+        button.textContent = 'its an alert'
+    }
+    button.onclick = changeText
+</script>
+</html>
